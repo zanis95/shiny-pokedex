@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , scale=initial-scale">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <script src="script.js" defers></script>
+</head>
+<body>
+  <h1>Shiny Pokedex</h1>
+  <div id="pokedex">
+    <div id="search-bar"><input type="text" id="search-input" placeholder="Pokémon Name or ID" autocomplete="off" required><button id="search-button"><img src="https://www.svgrepo.com/show/425208/search-find-ecommerce.svg" alt="magnifying loop" width="15px"> SEARCH</button></div>
+    <div id="top-screen">
+        <div class="pokemon-title">
+          <div id="pokemon-name">bulbasaur</div>
+          <div id="pokemon-id">#1</div>
+        </div>
+        <div id="pokemon">
+        <div id="sprites">
+        <img class="loading-spinner spin" src="https://www.svgrepo.com/show/521294/loading-16.svg" width="70" >  
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="front sprite" id="sprite" width="110">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png" alt="shiny front sprite" id="front-sprite" width="110">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png" alt="normal back sprites" id="normal-back-sprite" width="110">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png" alt="shiny back sprites" id="back-sprite" width="110">
+        <img class="loading-spinner spin" src="https://www.svgrepo.com/show/521294/loading-16.svg" width="70" >  
+        </div>
+        <div class="scroll-bar-line">
+        <div id="types"><p class="grass">GRASS</p><p class="poison">POISON</p></div><div id="scroll-bar">
+          <div id="button-container">
+            <button id="left-button">
+                <<
+            </button>
+            <button id="right-button">
+                >>
+            </button>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div id="pokedex-entry">A strange seed was planted on its back at birth.The plant sprouts and grows with this POKéMON.</div>
+      <div class="pokemon-info">
+          <div>Weight (dg): <p id="weight">69</p></div>
+          <div>Height (dm): <p id="height">7</p></div>
+        </div>
+    </div>
+    <div id="bottom-screen">
+      <div class="screen-border">
+      <ul id="stats">
+        <li>HP : <div id="hp"> 45</div></li>
+        <li>ATTACK : <div id="attack"> 49</div></li>
+        <li>DEFENSE :<div id="defense"> 49</div></li>
+        <li>SPECIAL ATTACK :<div id="special-attack">65</div></li>
+        <li>SPECIAL DEFENSE :<div id="special-defense">65</div></li>
+        <li>SPEED :<div id="speed">45</div></li>
+      </ul>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

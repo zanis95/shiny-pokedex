@@ -1,0 +1,362 @@
+body{
+    display:flex;
+    flex-direction:column;
+    background-image:url("https://wallpapercave.com/wp/wp8813120.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    padding:20px auto;
+  }
+  
+  body::-webkit-scrollbar {
+      display: none;
+      width:0px;
+  }
+  
+  h1{
+    text-align:center;
+    font-size:50px;
+    color:lightgreen;
+    font-family: 'VT323', monospace;
+    text-shadow:-1px -1px 0px green,3px 3px 0px black,4px 4px 0px white ;
+  }
+  
+  #search-input {
+    flex-grow: 1;
+    padding: 2px;
+    font-size: 17px;
+    border: 2px solid grey;
+    background-color: white;
+    font-family: 'VT323', monospace;
+    color: black;
+    outline: none; 
+    text-shadow: 1px 1px 0px white;
+    border-radius: 4px 0 0 4px; 
+  }
+  
+  #search-button{
+      border:2px solid grey;
+      border-bottom:2.5px solid grey;
+      background-color:black;
+      color:white;
+      font-family: 'VT323', monospace;
+      text-shadow:1px 1px 0px grey;
+      font-size:17px;
+      border-radius: 0px 4px 4px 0px; 
+      transition: background-color 0.3s ease,
+      color 0.3s ease, text-shadow 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  
+  #search-button:hover {
+      background-color: lightgrey;
+      color: black;
+      text-shadow: 1px 1px 0px white;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #search-button:active {
+      background-color: grey;
+      color: white;
+      text-shadow: 1px 1px 0px black;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2) inset;
+  }
+  
+  #top-screen{
+  background-color: var(--top-screen-color,lightgreen);
+  background-image: 
+      linear-gradient(0deg, transparent 24%, black 25%, black 26%, transparent 27%, transparent 74%, black 75%, black 76%, transparent 77%, transparent),
+      linear-gradient(90deg, transparent 24%, black 25%, black 26%, transparent 27%, transparent 74%, black 75%, black 76%, transparent 77%, transparent);
+  background-size: 15px 15px;
+  animation: moveBackground 0.5s linear infinite;
+  }
+  
+  @keyframes moveBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -15px 0;
+    }
+  }
+  
+  
+  #top-screen,#bottom-screen {
+    border:8px solid grey;
+    margin-bottom:5px;
+    margin-top:5px;
+  }
+  
+  .screen-border{
+      border:3px solid black;
+      display:flex;
+      justify-content:center;
+  }
+  
+  
+  .pokemon-title{
+    border-right:3px solid black;
+    border-left:3px solid black;
+    border-bottom:3px solid var(--top-screen-line,green);
+    border-top:3px solid black;
+    color:black;
+    background-color:white;
+    font-family: 'VT323', monospace;
+    text-shadow:1px 1px 0px grey;
+    padding:3px;
+    padding-left:10px;
+    font-size:20px;
+  }
+  
+  #sprites{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    justify-content:center;
+    align-items:center;
+  }
+  #sprites img {
+    margin: 0 auto;
+  }
+  .scroll-bar-line {
+      display: flex;
+      width: 100%; 
+      justify-content:center;
+      gap:10px;
+      align-items: center;
+      padding-right: 10px;
+      padding-left: 10px;
+      overflow: hidden; 
+  
+  }
+  #button-container {
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      box-sizing: border-box; 
+      overflow: hidden; 
+    }
+  
+  
+  #left-button,#right-button{
+      background:none;
+      border:none;
+      font-size:40px;
+      font-family: 'VT323', monospace;
+      color:white;
+      outline: none; 
+      transition: all 0.1s ease;
+  }
+  
+  
+  @media (max-width: 480px) {
+      .scroll-bar-line {
+          padding-right: 5px;
+          padding-left: 5px;
+          gap:0px;
+      }
+      
+      #button-container {
+          gap: 5px; 
+          width:100%;
+      }
+      
+      #left-button, #right-button {
+          max-width:35px;
+          font-size:30px;
+      }
+    
+  }
+  
+  #right-button {
+      text-shadow: 0 0 10px var(--top-screen-line,green), 0 0 20px darkgreen; 
+  }
+  
+  #left-button {
+      text-shadow: 0 0 10px var(--top-screen-line,green), 0 0 20px darkgreen; 
+  }
+  
+  #left-button:hover, #right-button:hover {
+      color: black;
+      transform: scale(1.2); 
+  }
+  
+  #left-button:active, #right-button:active {
+      color: lime;
+      transform: scale(0.95); 
+  }
+  
+  
+  #types p {
+    margin: 5px;
+    padding: 3px;
+    color: white;
+    border:2px solid black;
+    font-family: 'VT323', monospace;
+    text-shadow:1px 1px 0px black;
+    font-size: 20px;
+  }
+  
+  .typeless {
+    background: radial-gradient(circle, darkviolet, lightblue);
+  }
+  .grass {
+      background-color: #78C850;
+  }
+  .poison {
+      background-color: #A040A0;
+  }
+  .fire {
+      background-color: #F08030;
+  }
+  .water {
+      background-color: #6890F0;
+  }
+  .electric {
+      background-color: #F8D030;
+  }
+  .psychic {
+      background-color: #F85888;
+  }
+  .ice {
+      background-color: #98D8D8;
+  }
+  .dragon {
+      background-color: #7038F8;
+  }
+  .dark {
+      background-color: #705848;
+  }
+  .fairy {
+      background-color: #EE99AC;
+  }
+  .normal {
+      background-color: #A8A878;
+  }
+  .fighting {
+      background-color: #C03028;
+  }
+  .flying {
+      background-color: #A890F0;
+  }
+  .ground {
+      background-color: #E0C068;
+  }
+  .rock {
+      background-color: #B8A038;
+  }
+  .bug {
+      background-color: #A8B820;
+  }
+  .ghost {
+      background-color: #705898;
+  }
+  .steel {
+      background-color: #B8B8D0;
+  }
+  #pokemon{
+   border-right:3px solid black;
+   border-left:3px solid black;
+  }
+  #pokedex-entry{
+   text-align:center;
+   border-top : 3px solid var(--top-screen-line,green);
+   padding-bottom:10px;
+   border-right:3px solid black;
+   border-left:3px solid black;
+  }
+  .pokemon-info{
+   border : 3px solid black;
+   border-top : 3px solid var(--top-screen-line,green);
+   padding-top:0px;
+  }
+  
+  #pokedex-entry, .pokemon-info{
+   background-color:white;
+   color:black;
+   text-shadow:1px 1px 0px grey;
+   justify-content:center;
+  }
+  
+  #stats li,.pokemon-info,.pokemon-info div,.pokemon-title ,#types{
+    display:flex;
+    align-items:center;
+    gap:5px;
+  }
+  
+  #bottom-screen {
+      background-color: var(--bottom-screen-color,lightgreen);
+      background-image: 
+           linear-gradient(135deg, transparent 20%,  var(--bottom-screen-line,#32CD32) 21%, var(--bottom-screen-line,#32CD32) 40%, transparent 41%, transparent 60%, var(--bottom-screen-line,#32CD32) 61%, var(--bottom-screen-line,#32CD32) 80%, transparent 81%, transparent),
+          linear-gradient(45deg, transparent 20%, var(--bottom-screen-line,#32CD32) 21%, var(--bottom-screen-line,#32CD32) 40%, transparent 41%, transparent 60%, var(--bottom-screen-line,#32CD32) 61%, var(--bottom-screen-line,#32CD32) 80%, transparent 81%, transparent);
+          background-size: 30px 30px; 
+      animation: moveBottomBackground 0.7s linear infinite; 
+  }
+  
+  @keyframes moveBottomBackground {
+      from {
+          background-position: 0px 15px;
+      }
+      to {
+          background-position: 15px 0px;
+      }
+  }
+  
+  
+  #stats{
+      background-color:rgba(128, 128, 128, 0.85);
+      text-shadow:2px 2px 0px black;
+      border:3px solid white;
+      border-radius:5px;
+      width:60%;
+      padding-top:5px;
+      padding-bottom:5px;
+      position: relative;
+      z-index:1;
+  }
+  
+  #stats::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: var(--before-background-image, url("https://th.bing.com/th/id/OIP.UOWhG4Zvc5z1kE8fwPgFNQHaHa?rs=1&pid=ImgDetMain"));
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2; 
+      z-index: -1;
+      border-radius: 5px; 
+  }
+  
+  #stats li {
+      margin-left:-10px;
+  }
+  
+  #pokedex{
+    background-color:black;
+    color:white;
+    margin:auto;
+    width:290px;
+    padding:10px;
+    font-family: 'VT323', monospace;
+    padding-left:10px;
+    box-shadow:5px 0px 0px black, 5px 0px 8px black;
+    border-radius:5px;
+    border-right:10px solid red;
+    font-size:20px;
+  }
+  
+  .spin {
+      animation: spin 4s linear infinite;
+  }
+  
+  @keyframes spin {
+      from {
+          transform: rotate(0deg);
+      }
+      to {
+          transform: rotate(360deg);
+      }
+  }
